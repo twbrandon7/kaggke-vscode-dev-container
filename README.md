@@ -1,4 +1,4 @@
-# Python Template with Black, Flake8 and isort
+# Deep Learning Template with Pytorch, MLflow, Black, Flake8 and isort
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
