@@ -19,7 +19,7 @@ It is recommended to use [Visual Studio Code](https://code.visualstudio.com/) wi
 - [Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
-## Note for Jupiter Notebook
+## Note for Jupyter Notebook
 
 It is recommended to use Jupyter Notebook with Visual Studio Code. The file root of each
 notebook in this repository is set to the project root. So, you can import modules
