@@ -13,6 +13,8 @@ seaborn
 tqdm
 python-dotenv
 
+ipykernel
+
 # for development
 flake8
 pep8-naming
