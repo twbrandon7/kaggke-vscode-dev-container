@@ -2,7 +2,7 @@
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Usage
+## Installation
 
 Clone this repository and install dependencies by the following commands:
 
@@ -19,11 +19,28 @@ It is recommended to use [Visual Studio Code](https://code.visualstudio.com/) wi
 - [Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
+## Start your Deep Learning project
+
+You can create a new directory or a Jupyter Notebook in the `notebooks` directory, and start
+developing your Deep Learning experiments. If there are any common modules that you want to
+use in your experiments, you can create a new directory in the project root directory and
+create a Python module in it. For example, if you want to create a module named `libs`, you
+can create a directory named `libs` in the project root directory and create a `__init__.py`
+file in it. Then, you can import the module in the notebooks by the following code:
+
+```python
+import libs
+```
+
+Note: this feature is only works with Visual Studio Code. For more information, see the
+note below.
+
 ## Note for Jupyter Notebook
 
-It is recommended to use Jupyter Notebook with Visual Studio Code. The file root of each
-notebook in this repository is set to the project root. So, you can import modules
-in the project root directory by the following code (assuming there is a module named `libs`):
+It is recommended to use Jupyter Notebook with Visual Studio Code. When using VScode to
+open a Jupyter Notebook, the file root of each notebook in this repository is set to the
+project root. So, you can import modules in the project root directory by the following
+code (assuming there is a module named `libs`):
 
 ```python
 import libs
@@ -64,16 +81,3 @@ load_dotenv()
 ```
 
 For the example usage of MLflow, see notebooks in ["./notebooks/mlflow/"](./notebooks/mlflow/) directory.
-
-## Start your Deep Learning project
-
-You can create a new directory or a Jupyter Notebook in the `notebooks` directory, and start
-developing your Deep Learning experiments. If there are any common modules that you want to
-use in your experiments, you can create a new directory in the project root directory and
-create a Python module in it. For example, if you want to create a module named `libs`, you
-can create a directory named `libs` in the project root directory and create a `__init__.py`
-file in it. Then, you can import the module in the notebooks by the following code:
-
-```python
-import libs
-```
