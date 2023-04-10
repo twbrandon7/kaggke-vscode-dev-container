@@ -28,7 +28,6 @@ RUN groupmod -g ${GID} jupyter && \
 RUN echo "jupyter ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 USER jupyter
-SHELL ["/usr/bin/fish", "-c"]
 
 # install oh-my-fish
 RUN curl -L https://get.oh-my.fish > /tmp/install && \
@@ -40,4 +39,4 @@ RUN fish -c "omf install agnoster" && \
     fish -c "omf theme agnoster"
 
 # change default shell to fish
-RUN sudo chsh -s /usr/bin/fish jupyter
+SHELL ["/usr/bin/fish", "-c"]
