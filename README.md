@@ -1,23 +1,38 @@
-# Deep Learning Template with Pytorch, MLflow, Black, Flake8 and isort
+# Kaggle-VS Code Dev Container Template for Deep Learning
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+## Note
+
+This template is based on the GPU version of [Kaggle Python docker image](https://github.com/Kaggle/docker-python). To run this
+template, you need to have a GPU machine with Nvidia Driver and [NVIDIA Container Toolkit installed](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
+
 ## Installation
 
-Clone this repository and install dependencies by the following commands:
+1. Clone this repository and open it with Visual Studio Code.:
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+    ```bash
+    git clone https://github.com/twbrandon7/kaggke-vscode-dev-container.git
+    code .
+    ```
 
-## Recommended editor
+2. Make sure you have installed Docker and Nvidia Docker toolkit in your machine. If you are using Windows, you have to
+   install WSL2 and [Docker Desktop](https://www.docker.com/products/docker-desktop). In addition, you have to [install GPU driver
+   for WSL2](https://learn.microsoft.com/zh-tw/windows/ai/directml/gpu-cuda-in-wsl).
 
-It is recommended to use [Visual Studio Code](https://code.visualstudio.com/) with the following extensions:
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
-- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+   If you are using Linux, you can install Docker by following the [official guide](https://docs.docker.com/engine/install/) and install Nvidia Docker toolkit by following the [Nvidia official guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
+
+3. Pull the latest Kaggle Pytorch image:
+
+    ```bash
+    docker pull gcr.io/kaggle-gpu-images/python:latest
+    ```
+
+    The image is about 16GB in size, so it may take a while to download.
+
+4. Make sure [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) for VS Code extension is installed.
+
+5. In Visual Studio Code, open the Command Palette (Ctrl+Shift+P) and select the "Remote-Containers: Reopen in Container" command to open this project.
 
 ## Start your Deep Learning project
 
